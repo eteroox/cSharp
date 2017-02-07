@@ -1,0 +1,24 @@
+c:\users\denis\documents\visual studio 2013\Projects\Dimension\Dimension\bin\Debug\Dimension.exe.config
+c:\users\denis\documents\visual studio 2013\Projects\Dimension\Dimension\bin\Debug\Dimension.exe
+c:\users\denis\documents\visual studio 2013\Projects\Dimension\Dimension\bin\Debug\Dimension.pdb
+c:\users\denis\documents\visual studio 2013\Projects\Dimension\Dimension\obj\Debug\Dimension.csprojResolveAssemblyReference.cache
+c:\users\denis\documents\visual studio 2013\Projects\Dimension\Dimension\obj\Debug\Dimension.MainForm.resources
+c:\users\denis\documents\visual studio 2013\Projects\Dimension\Dimension\obj\Debug\Dimension.Properties.Resources.resources
+c:\users\denis\documents\visual studio 2013\Projects\Dimension\Dimension\obj\Debug\Dimension.csproj.GenerateResource.Cache
+c:\users\denis\documents\visual studio 2013\Projects\Dimension\Dimension\obj\Debug\Dimension.exe
+c:\users\denis\documents\visual studio 2013\Projects\Dimension\Dimension\obj\Debug\Dimension.pdb
+C:\Users\denis\documents\visual studio 2013\Projects\Dimension\Dimension\obj\Debug\Dimension.Favorites.resources
+C:\Users\denis\Documents\Visual Studio 2013\Projects\Dimension\Dimension\obj\Debug\Dimension.bookmarks.resources
+E:\alati\Dimension\Dimension\bin\Debug\Dimension.exe.config
+E:\alati\Dimension\Dimension\obj\Debug\Dimension.exe
+E:\alati\Dimension\Dimension\obj\Debug\Dimension.pdb
+E:\alati\Dimension\Dimension\bin\Debug\Dimension.exe
+E:\alati\Dimension\Dimension\bin\Debug\Dimension.pdb
+E:\alati\Dimension\Dimension\obj\Debug\Dimension.csprojResolveAssemblyReference.cache
+E:\alati\Dimension\Dimension\obj\Debug\Dimension.bookmarks.resources
+E:\alati\Dimension\Dimension\obj\Debug\Dimension.MainForm.resources
+E:\alati\Dimension\Dimension\obj\Debug\Dimension.Properties.Resources.resources
+E:\alati\Dimension\Dimension\obj\Debug\Dimension.csproj.GenerateResource.Cache
+C:\Users\denis\Documents\Visual Studio 2015\Projects\C#\Dimension\Dimension\bin\Debug\Dimension.exe.config
+C:\Users\denis\Documents\Visual Studio 2015\Projects\C#\Dimension\Dimension\obj\Debug\Dimension.exe
+C:\Users\denis\Documents\Visual Studio 2015\Projects\C#\Dimension\Dimension\obj\Debug\Dimension.pdb
