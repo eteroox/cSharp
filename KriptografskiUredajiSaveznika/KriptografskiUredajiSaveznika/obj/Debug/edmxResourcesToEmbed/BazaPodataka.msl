@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="uredajiModelStoreContainer" CdmEntityContainer="uredajiEntities">
+    <EntitySetMapping Name="porukes">
+      <EntityTypeMapping TypeName="uredajiModel.poruke">
+        <MappingFragment StoreEntitySet="poruke">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="sifrirano" ColumnName="sifrirano" />
+          <ScalarProperty Name="desifrirano" ColumnName="desifrirano" />
+          <ScalarProperty Name="konacno" ColumnName="konacno" />
+          <ScalarProperty Name="sifriranoSigaba" ColumnName="sifriranoSigaba" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="typexes">
+      <EntityTypeMapping TypeName="uredajiModel.typex">
+        <MappingFragment StoreEntitySet="typex">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="slovo" ColumnName="slovo" />
+          <ScalarProperty Name="sifra" ColumnName="sifra" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

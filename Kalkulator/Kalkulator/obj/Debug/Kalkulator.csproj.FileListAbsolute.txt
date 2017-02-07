@@ -1,0 +1,19 @@
+E:\na vjezbama\Kalkulator\Kalkulator\bin\Debug\Kalkulator.exe
+E:\na vjezbama\Kalkulator\Kalkulator\bin\Debug\Kalkulator.pdb
+E:\na vjezbama\Kalkulator\Kalkulator\obj\Debug\Kalkulator.csprojResolveAssemblyReference.cache
+E:\na vjezbama\Kalkulator\Kalkulator\obj\Debug\Kalkulator.MainForm.resources
+E:\na vjezbama\Kalkulator\Kalkulator\obj\Debug\Kalkulator.Properties.Resources.resources
+E:\na vjezbama\Kalkulator\Kalkulator\obj\Debug\Kalkulator.csproj.GenerateResource.Cache
+E:\na vjezbama\Kalkulator\Kalkulator\obj\Debug\Kalkulator.exe
+E:\na vjezbama\Kalkulator\Kalkulator\obj\Debug\Kalkulator.pdb
+F:\na vjezbama\Kalkulator\Kalkulator\obj\Debug\Kalkulator.exe
+F:\na vjezbama\Kalkulator\Kalkulator\obj\Debug\Kalkulator.pdb
+F:\na vjezbama\Kalkulator\Kalkulator\bin\Debug\Kalkulator.exe
+F:\na vjezbama\Kalkulator\Kalkulator\bin\Debug\Kalkulator.pdb
+F:\na vjezbama\Kalkulator\Kalkulator\obj\Debug\Kalkulator.csprojResolveAssemblyReference.cache
+F:\na vjezbama\Kalkulator\Kalkulator\obj\Debug\Kalkulator.MainForm.resources
+F:\na vjezbama\Kalkulator\Kalkulator\obj\Debug\Kalkulator.Properties.Resources.resources
+F:\na vjezbama\Kalkulator\Kalkulator\obj\Debug\Kalkulator.csproj.GenerateResource.Cache
+F:\na vjezbama\Kalkulator\Kalkulator\obj\Debug\Kalkulator.Info.resources
+C:\Users\denis\Documents\Visual Studio 2015\Projects\C#\Kalkulator\Kalkulator\obj\Debug\Kalkulator.exe
+C:\Users\denis\Documents\Visual Studio 2015\Projects\C#\Kalkulator\Kalkulator\obj\Debug\Kalkulator.pdb

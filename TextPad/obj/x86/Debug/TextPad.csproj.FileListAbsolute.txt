@@ -1,0 +1,35 @@
+C:\Users\denis\Downloads\TextPad (1)\bin\Debug\TextPad.exe
+C:\Users\denis\Downloads\TextPad (1)\bin\Debug\TextPad.pdb
+C:\Users\denis\Downloads\TextPad (1)\obj\x86\Debug\TextPad.csprojResolveAssemblyReference.cache
+C:\Users\denis\Downloads\TextPad (1)\obj\x86\Debug\TextPad1.findForm.resources
+C:\Users\denis\Downloads\TextPad (1)\obj\x86\Debug\TextPad1.TextPadMainForm.resources
+C:\Users\denis\Downloads\TextPad (1)\obj\x86\Debug\TextPad.Properties.Resources.resources
+C:\Users\denis\Downloads\TextPad (1)\obj\x86\Debug\TextPad1.replaceForm.resources
+C:\Users\denis\Downloads\TextPad (1)\obj\x86\Debug\TextPad.csproj.GenerateResource.Cache
+C:\Users\denis\Downloads\TextPad (1)\obj\x86\Debug\TextPad.exe
+C:\Users\denis\Downloads\TextPad (1)\obj\x86\Debug\TextPad.pdb
+F:\TextPad\obj\x86\Debug\TextPad.exe
+F:\TextPad\obj\x86\Debug\TextPad.pdb
+F:\TextPad\bin\Debug\TextPad.exe
+F:\TextPad\bin\Debug\TextPad.pdb
+F:\TextPad\obj\x86\Debug\TextPad.csprojResolveAssemblyReference.cache
+F:\TextPad\obj\x86\Debug\TextPad1.findForm.resources
+F:\TextPad\obj\x86\Debug\TextPad1.TextPadMainForm.resources
+F:\TextPad\obj\x86\Debug\TextPad.Properties.Resources.resources
+F:\TextPad\obj\x86\Debug\TextPad1.replaceForm.resources
+F:\TextPad\obj\x86\Debug\TextPad.csproj.GenerateResource.Cache
+E:\na vjezbama\TextPad\obj\x86\Debug\TextPad.exe
+E:\na vjezbama\TextPad\obj\x86\Debug\TextPad.pdb
+F:\na vjezbama\TextPad\obj\x86\Debug\TextPad.exe
+F:\na vjezbama\TextPad\obj\x86\Debug\TextPad.pdb
+F:\na vjezbama\TextPad\obj\x86\Debug\TextPad.csprojResolveAssemblyReference.cache
+F:\na vjezbama\TextPad\obj\x86\Debug\TextPad1.findForm.resources
+F:\na vjezbama\TextPad\obj\x86\Debug\TextPad.info.resources
+F:\na vjezbama\TextPad\obj\x86\Debug\TextPad1.TextPadMainForm.resources
+F:\na vjezbama\TextPad\obj\x86\Debug\TextPad.Properties.Resources.resources
+F:\na vjezbama\TextPad\obj\x86\Debug\TextPad1.replaceForm.resources
+F:\na vjezbama\TextPad\obj\x86\Debug\TextPad.csproj.GenerateResource.Cache
+F:\na vjezbama\TextPad\bin\Debug\TextPad.exe
+F:\na vjezbama\TextPad\bin\Debug\TextPad.pdb
+C:\Users\denis\Documents\Visual Studio 2015\Projects\C#\TextPad\obj\x86\Debug\TextPad.exe
+C:\Users\denis\Documents\Visual Studio 2015\Projects\C#\TextPad\obj\x86\Debug\TextPad.pdb

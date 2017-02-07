@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="WhoAmIModelStoreContainer" CdmEntityContainer="WhoAmIEntities">
+    <EntitySetMapping Name="answers">
+      <EntityTypeMapping TypeName="WhoAmIModel.answer">
+        <MappingFragment StoreEntitySet="answers">
+          <ScalarProperty Name="stagesDif" ColumnName="stagesDif" />
+          <ScalarProperty Name="critical" ColumnName="critical" />
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="question" ColumnName="question" />
+          <ScalarProperty Name="answ1" ColumnName="answ1" />
+          <ScalarProperty Name="answ2" ColumnName="answ2" />
+          <ScalarProperty Name="answ3" ColumnName="answ3" />
+          <ScalarProperty Name="idLevels" ColumnName="idLevels" />
+          <ScalarProperty Name="idStages" ColumnName="idStages" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Characters">
+      <EntityTypeMapping TypeName="WhoAmIModel.Character">
+        <MappingFragment StoreEntitySet="Characters">
+          <ScalarProperty Name="intro" ColumnName="intro" />
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="idLevels" ColumnName="idLevels" />
+          <ScalarProperty Name="idStages" ColumnName="idStages" />
+          <ScalarProperty Name="idPlayers" ColumnName="idPlayers" />
+          <ScalarProperty Name="idCriticals" ColumnName="idCriticals" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Criticals">
+      <EntityTypeMapping TypeName="WhoAmIModel.Critical">
+        <MappingFragment StoreEntitySet="Criticals">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Choise" ColumnName="Choise" />
+          <ScalarProperty Name="idLevel" ColumnName="idLevel" />
+          <ScalarProperty Name="idStage" ColumnName="idStage" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="journals">
+      <EntityTypeMapping TypeName="WhoAmIModel.journal">
+        <MappingFragment StoreEntitySet="journals">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="idLevels" ColumnName="idLevels" />
+          <ScalarProperty Name="idStages" ColumnName="idStages" />
+          <ScalarProperty Name="idAnswers" ColumnName="idAnswers" />
+          <ScalarProperty Name="idCharacters" ColumnName="idCharacters" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Levels">
+      <EntityTypeMapping TypeName="WhoAmIModel.Level">
+        <MappingFragment StoreEntitySet="Levels">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="players">
+      <EntityTypeMapping TypeName="WhoAmIModel.player">
+        <MappingFragment StoreEntitySet="players">
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Surname" ColumnName="Surname" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="Age" ColumnName="Age" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Stages">
+      <EntityTypeMapping TypeName="WhoAmIModel.Stage">
+        <MappingFragment StoreEntitySet="Stages">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="idLevels" ColumnName="idLevels" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

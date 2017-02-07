@@ -1,0 +1,318 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="WhoAmIModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="answer">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="question" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="answ1" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="answ2" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="answ3" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="idLevels" Type="Int32" />
+    <Property Name="idStages" Type="Int32" />
+    <NavigationProperty Name="Level" Relationship="Self.FK__answers__idLevel__145C0A3F" FromRole="answers" ToRole="Levels" />
+    <NavigationProperty Name="Stage" Relationship="Self.FK__answers__idStage__15502E78" FromRole="answers" ToRole="Stages" />
+    <NavigationProperty Name="journals" Relationship="Self.FK__journals__idAnsw__1BFD2C07" FromRole="answers" ToRole="journals" />
+    <Property Name="critical" Type="Int32" />
+    <Property Name="stagesDif" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Character">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="idLevels" Type="Int32" />
+    <Property Name="idStages" Type="Int32" />
+    <Property Name="idPlayers" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="idCriticals" Type="Int32" />
+    <NavigationProperty Name="Critical" Relationship="Self.FK__Character__idCri__21B6055D" FromRole="Characters" ToRole="Criticals" />
+    <NavigationProperty Name="Level" Relationship="Self.FK__Character__idLev__0DAF0CB0" FromRole="Characters" ToRole="Levels" />
+    <NavigationProperty Name="player" Relationship="Self.FK__Character__idPla__0F975522" FromRole="Characters" ToRole="players" />
+    <NavigationProperty Name="Stage" Relationship="Self.FK__Character__idSta__0EA330E9" FromRole="Characters" ToRole="Stages" />
+    <NavigationProperty Name="journals" Relationship="Self.FK__journals__idChar__1CF15040" FromRole="Characters" ToRole="journals" />
+    <Property Name="intro" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Critical">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Choise" Type="Int32" />
+    <Property Name="idLevel" Type="Int32" />
+    <Property Name="idStage" Type="Int32" />
+    <NavigationProperty Name="Characters" Relationship="Self.FK__Character__idCri__21B6055D" FromRole="Criticals" ToRole="Characters" />
+    <NavigationProperty Name="Level" Relationship="Self.FK__Criticals__idLev__22AA2996" FromRole="Criticals" ToRole="Levels" />
+    <NavigationProperty Name="Stage" Relationship="Self.FK__Criticals__idSta__239E4DCF" FromRole="Criticals" ToRole="Stages" />
+  </EntityType>
+  <EntityType Name="journal">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="idLevels" Type="Int32" />
+    <Property Name="idStages" Type="Int32" />
+    <Property Name="idAnswers" Type="Int32" />
+    <Property Name="idCharacters" Type="Int32" />
+    <NavigationProperty Name="answer" Relationship="Self.FK__journals__idAnsw__1BFD2C07" FromRole="journals" ToRole="answers" />
+    <NavigationProperty Name="Character" Relationship="Self.FK__journals__idChar__1CF15040" FromRole="journals" ToRole="Characters" />
+    <NavigationProperty Name="Level" Relationship="Self.FK__journals__idLeve__1A14E395" FromRole="journals" ToRole="Levels" />
+    <NavigationProperty Name="Stage" Relationship="Self.FK__journals__idStag__1B0907CE" FromRole="journals" ToRole="Stages" />
+  </EntityType>
+  <EntityType Name="Level">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="answers" Relationship="Self.FK__answers__idLevel__145C0A3F" FromRole="Levels" ToRole="answers" />
+    <NavigationProperty Name="Characters" Relationship="Self.FK__Character__idLev__0DAF0CB0" FromRole="Levels" ToRole="Characters" />
+    <NavigationProperty Name="Criticals" Relationship="Self.FK__Criticals__idLev__22AA2996" FromRole="Levels" ToRole="Criticals" />
+    <NavigationProperty Name="journals" Relationship="Self.FK__journals__idLeve__1A14E395" FromRole="Levels" ToRole="journals" />
+    <NavigationProperty Name="Stages" Relationship="Self.FK__Stages__idLevels__08EA5793" FromRole="Levels" ToRole="Stages" />
+  </EntityType>
+  <EntityType Name="player">
+    <Key>
+      <PropertyRef Name="email" />
+    </Key>
+    <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Surname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Country" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Age" Type="Int32" />
+    <NavigationProperty Name="Characters" Relationship="Self.FK__Character__idPla__0F975522" FromRole="players" ToRole="Characters" />
+  </EntityType>
+  <EntityType Name="Stage">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="idLevels" Type="Int32" />
+    <NavigationProperty Name="answers" Relationship="Self.FK__answers__idStage__15502E78" FromRole="Stages" ToRole="answers" />
+    <NavigationProperty Name="Characters" Relationship="Self.FK__Character__idSta__0EA330E9" FromRole="Stages" ToRole="Characters" />
+    <NavigationProperty Name="Criticals" Relationship="Self.FK__Criticals__idSta__239E4DCF" FromRole="Stages" ToRole="Criticals" />
+    <NavigationProperty Name="journals" Relationship="Self.FK__journals__idStag__1B0907CE" FromRole="Stages" ToRole="journals" />
+    <NavigationProperty Name="Level" Relationship="Self.FK__Stages__idLevels__08EA5793" FromRole="Stages" ToRole="Levels" />
+  </EntityType>
+  <Association Name="FK__answers__idLevel__145C0A3F">
+    <End Role="Levels" Type="Self.Level" Multiplicity="0..1" />
+    <End Role="answers" Type="Self.answer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Levels">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="answers">
+        <PropertyRef Name="idLevels" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__answers__idStage__15502E78">
+    <End Role="Stages" Type="Self.Stage" Multiplicity="0..1" />
+    <End Role="answers" Type="Self.answer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Stages">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="answers">
+        <PropertyRef Name="idStages" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__journals__idAnsw__1BFD2C07">
+    <End Role="answers" Type="Self.answer" Multiplicity="0..1" />
+    <End Role="journals" Type="Self.journal" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="answers">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="journals">
+        <PropertyRef Name="idAnswers" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Character__idCri__21B6055D">
+    <End Role="Criticals" Type="Self.Critical" Multiplicity="0..1" />
+    <End Role="Characters" Type="Self.Character" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Criticals">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Characters">
+        <PropertyRef Name="idCriticals" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Character__idLev__0DAF0CB0">
+    <End Role="Levels" Type="Self.Level" Multiplicity="0..1" />
+    <End Role="Characters" Type="Self.Character" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Levels">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Characters">
+        <PropertyRef Name="idLevels" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Character__idPla__0F975522">
+    <End Role="players" Type="Self.player" Multiplicity="0..1" />
+    <End Role="Characters" Type="Self.Character" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="players">
+        <PropertyRef Name="email" />
+      </Principal>
+      <Dependent Role="Characters">
+        <PropertyRef Name="idPlayers" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Character__idSta__0EA330E9">
+    <End Role="Stages" Type="Self.Stage" Multiplicity="0..1" />
+    <End Role="Characters" Type="Self.Character" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Stages">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Characters">
+        <PropertyRef Name="idStages" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__journals__idChar__1CF15040">
+    <End Role="Characters" Type="Self.Character" Multiplicity="0..1" />
+    <End Role="journals" Type="Self.journal" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Characters">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="journals">
+        <PropertyRef Name="idCharacters" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Criticals__idLev__22AA2996">
+    <End Role="Levels" Type="Self.Level" Multiplicity="0..1" />
+    <End Role="Criticals" Type="Self.Critical" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Levels">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Criticals">
+        <PropertyRef Name="idLevel" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Criticals__idSta__239E4DCF">
+    <End Role="Stages" Type="Self.Stage" Multiplicity="0..1" />
+    <End Role="Criticals" Type="Self.Critical" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Stages">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Criticals">
+        <PropertyRef Name="idStage" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__journals__idLeve__1A14E395">
+    <End Role="Levels" Type="Self.Level" Multiplicity="0..1" />
+    <End Role="journals" Type="Self.journal" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Levels">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="journals">
+        <PropertyRef Name="idLevels" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__journals__idStag__1B0907CE">
+    <End Role="Stages" Type="Self.Stage" Multiplicity="0..1" />
+    <End Role="journals" Type="Self.journal" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Stages">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="journals">
+        <PropertyRef Name="idStages" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Stages__idLevels__08EA5793">
+    <End Role="Levels" Type="Self.Level" Multiplicity="0..1" />
+    <End Role="Stages" Type="Self.Stage" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Levels">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Stages">
+        <PropertyRef Name="idLevels" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="WhoAmIEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="answers" EntityType="Self.answer" />
+    <EntitySet Name="Characters" EntityType="Self.Character" />
+    <EntitySet Name="Criticals" EntityType="Self.Critical" />
+    <EntitySet Name="journals" EntityType="Self.journal" />
+    <EntitySet Name="Levels" EntityType="Self.Level" />
+    <EntitySet Name="players" EntityType="Self.player" />
+    <EntitySet Name="Stages" EntityType="Self.Stage" />
+    <AssociationSet Name="FK__answers__idLevel__145C0A3F" Association="Self.FK__answers__idLevel__145C0A3F">
+      <End Role="Levels" EntitySet="Levels" />
+      <End Role="answers" EntitySet="answers" />
+    </AssociationSet>
+    <AssociationSet Name="FK__answers__idStage__15502E78" Association="Self.FK__answers__idStage__15502E78">
+      <End Role="Stages" EntitySet="Stages" />
+      <End Role="answers" EntitySet="answers" />
+    </AssociationSet>
+    <AssociationSet Name="FK__journals__idAnsw__1BFD2C07" Association="Self.FK__journals__idAnsw__1BFD2C07">
+      <End Role="answers" EntitySet="answers" />
+      <End Role="journals" EntitySet="journals" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Character__idCri__21B6055D" Association="Self.FK__Character__idCri__21B6055D">
+      <End Role="Criticals" EntitySet="Criticals" />
+      <End Role="Characters" EntitySet="Characters" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Character__idLev__0DAF0CB0" Association="Self.FK__Character__idLev__0DAF0CB0">
+      <End Role="Levels" EntitySet="Levels" />
+      <End Role="Characters" EntitySet="Characters" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Character__idPla__0F975522" Association="Self.FK__Character__idPla__0F975522">
+      <End Role="players" EntitySet="players" />
+      <End Role="Characters" EntitySet="Characters" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Character__idSta__0EA330E9" Association="Self.FK__Character__idSta__0EA330E9">
+      <End Role="Stages" EntitySet="Stages" />
+      <End Role="Characters" EntitySet="Characters" />
+    </AssociationSet>
+    <AssociationSet Name="FK__journals__idChar__1CF15040" Association="Self.FK__journals__idChar__1CF15040">
+      <End Role="Characters" EntitySet="Characters" />
+      <End Role="journals" EntitySet="journals" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Criticals__idLev__22AA2996" Association="Self.FK__Criticals__idLev__22AA2996">
+      <End Role="Levels" EntitySet="Levels" />
+      <End Role="Criticals" EntitySet="Criticals" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Criticals__idSta__239E4DCF" Association="Self.FK__Criticals__idSta__239E4DCF">
+      <End Role="Stages" EntitySet="Stages" />
+      <End Role="Criticals" EntitySet="Criticals" />
+    </AssociationSet>
+    <AssociationSet Name="FK__journals__idLeve__1A14E395" Association="Self.FK__journals__idLeve__1A14E395">
+      <End Role="Levels" EntitySet="Levels" />
+      <End Role="journals" EntitySet="journals" />
+    </AssociationSet>
+    <AssociationSet Name="FK__journals__idStag__1B0907CE" Association="Self.FK__journals__idStag__1B0907CE">
+      <End Role="Stages" EntitySet="Stages" />
+      <End Role="journals" EntitySet="journals" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Stages__idLevels__08EA5793" Association="Self.FK__Stages__idLevels__08EA5793">
+      <End Role="Levels" EntitySet="Levels" />
+      <End Role="Stages" EntitySet="Stages" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,27 @@
+c:\users\denis\documents\visual studio 2013\Projects\ScreenServer\ScreenServer\bin\Debug\ScreenServer.exe.config
+c:\users\denis\documents\visual studio 2013\Projects\ScreenServer\ScreenServer\bin\Debug\ScreenServer.exe
+c:\users\denis\documents\visual studio 2013\Projects\ScreenServer\ScreenServer\bin\Debug\ScreenServer.pdb
+c:\users\denis\documents\visual studio 2013\Projects\ScreenServer\ScreenServer\obj\Debug\ScreenServer.csprojResolveAssemblyReference.cache
+c:\users\denis\documents\visual studio 2013\Projects\ScreenServer\ScreenServer\obj\Debug\ScreenServer.Properties.Resources.resources
+c:\users\denis\documents\visual studio 2013\Projects\ScreenServer\ScreenServer\obj\Debug\ScreenServer.csproj.GenerateResource.Cache
+c:\users\denis\documents\visual studio 2013\Projects\ScreenServer\ScreenServer\obj\Debug\ScreenServer.exe
+c:\users\denis\documents\visual studio 2013\Projects\ScreenServer\ScreenServer\obj\Debug\ScreenServer.pdb
+c:\users\denis\documents\visual studio 2013\Projects\ScreenServer\ScreenServer\obj\Debug\ScreenServer.ScreenServerMain.resources
+F:\na vjezbama\ScreenServer\ScreenServer\bin\Debug\ScreenServer.exe.config
+F:\na vjezbama\ScreenServer\ScreenServer\obj\Debug\ScreenServer.exe
+F:\na vjezbama\ScreenServer\ScreenServer\obj\Debug\ScreenServer.pdb
+F:\na vjezbama\ScreenServer\ScreenServer\bin\Debug\ScreenServer.exe
+F:\na vjezbama\ScreenServer\ScreenServer\bin\Debug\ScreenServer.pdb
+F:\na vjezbama\ScreenServer\ScreenServer\obj\Debug\ScreenServer.csprojResolveAssemblyReference.cache
+F:\na vjezbama\ScreenServer\ScreenServer\obj\Debug\ScreenServer.ScreenServerMain.resources
+F:\na vjezbama\ScreenServer\ScreenServer\obj\Debug\ScreenServer.Properties.Resources.resources
+F:\na vjezbama\ScreenServer\ScreenServer\obj\Debug\ScreenServer.csproj.GenerateResource.Cache
+C:\Users\denis\Documents\Visual Studio 2015\Projects\C#\ScreenServer\ScreenServer\bin\Debug\ScreenServer.exe.config
+C:\Users\denis\Documents\Visual Studio 2015\Projects\C#\ScreenServer\ScreenServer\obj\Debug\ScreenServer.exe
+C:\Users\denis\Documents\Visual Studio 2015\Projects\C#\ScreenServer\ScreenServer\obj\Debug\ScreenServer.pdb
+C:\Users\denis\Documents\Visual Studio 2015\Projects\C#\ScreenServer\ScreenServer\bin\Debug\ScreenServer.exe
+C:\Users\denis\Documents\Visual Studio 2015\Projects\C#\ScreenServer\ScreenServer\bin\Debug\ScreenServer.pdb
+C:\Users\denis\Documents\Visual Studio 2015\Projects\C#\ScreenServer\ScreenServer\obj\Debug\ScreenServer.csprojResolveAssemblyReference.cache
+C:\Users\denis\Documents\Visual Studio 2015\Projects\C#\ScreenServer\ScreenServer\obj\Debug\ScreenServer.ScreenServerMain.resources
+C:\Users\denis\Documents\Visual Studio 2015\Projects\C#\ScreenServer\ScreenServer\obj\Debug\ScreenServer.Properties.Resources.resources
+C:\Users\denis\Documents\Visual Studio 2015\Projects\C#\ScreenServer\ScreenServer\obj\Debug\ScreenServer.csproj.GenerateResource.Cache

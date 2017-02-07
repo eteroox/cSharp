@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="uredajiModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="poruke">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="sifrirano" Type="text" />
+          <Property Name="desifrirano" Type="text" />
+          <Property Name="konacno" Type="text" />
+          <Property Name="sifriranoSigaba" Type="text" />
+          <Property Name="greska" Type="text" />
+        </EntityType>
+        <EntityType Name="pravila">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="pravilo" Type="text" />
+          <Property Name="opis" Type="text" />
+        </EntityType>
+        <EntityType Name="typex">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="slovo" Type="varchar" MaxLength="10" />
+          <Property Name="sifra" Type="varchar" MaxLength="10" />
+          <Property Name="sigabaSifra" Type="varchar" MaxLength="10" />
+        </EntityType>
+        <EntityContainer Name="uredajiModelStoreContainer">
+          <EntitySet Name="poruke" EntityType="Self.poruke" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="pravila" EntityType="Self.pravila" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="typex" EntityType="Self.typex" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="uredajiModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="poruke">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="sifrirano" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="desifrirano" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="konacno" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="sifriranoSigaba" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="greska" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="typex">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="slovo" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="sifra" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="sigabaSifra" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="uredajiEntities1" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="porukes" EntityType="Self.poruke" />
+          <EntitySet Name="typexes" EntityType="Self.typex" />
+          <EntitySet Name="pravilas" EntityType="uredajiModel.pravila" />
+        </EntityContainer>
+        <EntityType Name="pravila">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="pravilo" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="opis" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="uredajiModelStoreContainer" CdmEntityContainer="uredajiEntities1">
+          <EntitySetMapping Name="porukes">
+            <EntityTypeMapping TypeName="uredajiModel.poruke">
+              <MappingFragment StoreEntitySet="poruke">
+                <ScalarProperty Name="greska" ColumnName="greska" />
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="sifrirano" ColumnName="sifrirano" />
+                <ScalarProperty Name="desifrirano" ColumnName="desifrirano" />
+                <ScalarProperty Name="konacno" ColumnName="konacno" />
+                <ScalarProperty Name="sifriranoSigaba" ColumnName="sifriranoSigaba" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="typexes">
+            <EntityTypeMapping TypeName="uredajiModel.typex">
+              <MappingFragment StoreEntitySet="typex">
+                <ScalarProperty Name="sigabaSifra" ColumnName="sigabaSifra" />
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="slovo" ColumnName="slovo" />
+                <ScalarProperty Name="sifra" ColumnName="sifra" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="pravilas">
+            <EntityTypeMapping TypeName="uredajiModel.pravila">
+              <MappingFragment StoreEntitySet="pravila">
+                <ScalarProperty Name="opis" ColumnName="opis" />
+                <ScalarProperty Name="pravilo" ColumnName="pravilo" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

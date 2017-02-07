@@ -1,0 +1,30 @@
+C:\Users\denis\Desktop\web , c sharp ,photoshop\c #\DimensionPlayer\DimensionPlayer\bin\Debug\DimensionPlayer.exe.config
+C:\Users\denis\Desktop\web , c sharp ,photoshop\c #\DimensionPlayer\DimensionPlayer\bin\Debug\DimensionPlayer.exe
+C:\Users\denis\Desktop\web , c sharp ,photoshop\c #\DimensionPlayer\DimensionPlayer\bin\Debug\DimensionPlayer.pdb
+C:\Users\denis\Desktop\web , c sharp ,photoshop\c #\DimensionPlayer\DimensionPlayer\bin\Debug\Interop.AXVLC.dll
+C:\Users\denis\Desktop\web , c sharp ,photoshop\c #\DimensionPlayer\DimensionPlayer\bin\Debug\AxInterop.AXVLC.dll
+C:\Users\denis\Desktop\web , c sharp ,photoshop\c #\DimensionPlayer\DimensionPlayer\obj\Debug\DimensionPlayer.csprojResolveAssemblyReference.cache
+C:\Users\denis\Desktop\web , c sharp ,photoshop\c #\DimensionPlayer\DimensionPlayer\obj\Debug\Interop.AXVLC.dll
+C:\Users\denis\Desktop\web , c sharp ,photoshop\c #\DimensionPlayer\DimensionPlayer\obj\Debug\AxInterop.AXVLC.dll
+C:\Users\denis\Desktop\web , c sharp ,photoshop\c #\DimensionPlayer\DimensionPlayer\obj\Debug\DimensionPlayer.csproj.ResolveComReference.cache
+C:\Users\denis\Desktop\web , c sharp ,photoshop\c #\DimensionPlayer\DimensionPlayer\obj\Debug\DimensionPlayer.Properties.Resources.resources
+C:\Users\denis\Desktop\web , c sharp ,photoshop\c #\DimensionPlayer\DimensionPlayer\obj\Debug\DimensionPlayer.csproj.GenerateResource.Cache
+C:\Users\denis\Desktop\web , c sharp ,photoshop\c #\DimensionPlayer\DimensionPlayer\obj\Debug\DimensionPlayer.exe
+C:\Users\denis\Desktop\web , c sharp ,photoshop\c #\DimensionPlayer\DimensionPlayer\obj\Debug\DimensionPlayer.pdb
+C:\Users\denis\Desktop\web , c sharp ,photoshop\c #\DimensionPlayer\DimensionPlayer\obj\Debug\DimensionPlayer.MainForm.resources
+C:\Users\denis\Desktop\web , c sharp ,photoshop\c #\DimensionPlayer\DimensionPlayer\obj\Debug\DimensionPlayer.Video.resources
+C:\Users\denis\Desktop\web , c sharp ,photoshop\c #\DimensionPlayer\DimensionPlayer\obj\Debug\DimensionPlayer.glazba.resources
+C:\Users\denis\Desktop\web , c sharp ,photoshop\c #\DimensionPlayer\DimensionPlayer\obj\Debug\DimensionPlayer.youtube.resources
+C:\Users\denis\Desktop\web , c sharp ,photoshop\c #\DimensionPlayer\DimensionPlayer\obj\Debug\DimensionPlayer.Info.resources
+C:\Users\denis\Desktop\web , c sharp ,photoshop\c #\DimensionPlayer\DimensionPlayer\bin\Debug\Interop.WMPLib.dll
+C:\Users\denis\Desktop\web , c sharp ,photoshop\c #\DimensionPlayer\DimensionPlayer\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\denis\Desktop\web , c sharp ,photoshop\c #\DimensionPlayer\DimensionPlayer\obj\Debug\Interop.WMPLib.dll
+C:\Users\denis\Desktop\web , c sharp ,photoshop\c #\DimensionPlayer\DimensionPlayer\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\denis\Documents\Visual Studio 2015\Projects\C#\DimensionPlayer\DimensionPlayer\bin\Debug\DimensionPlayer.exe.config
+C:\Users\denis\Documents\Visual Studio 2015\Projects\C#\DimensionPlayer\DimensionPlayer\obj\Debug\Interop.AXVLC.dll
+C:\Users\denis\Documents\Visual Studio 2015\Projects\C#\DimensionPlayer\DimensionPlayer\obj\Debug\Interop.WMPLib.dll
+C:\Users\denis\Documents\Visual Studio 2015\Projects\C#\DimensionPlayer\DimensionPlayer\obj\Debug\AxInterop.AXVLC.dll
+C:\Users\denis\Documents\Visual Studio 2015\Projects\C#\DimensionPlayer\DimensionPlayer\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\denis\Documents\Visual Studio 2015\Projects\C#\DimensionPlayer\DimensionPlayer\obj\Debug\DimensionPlayer.csproj.ResolveComReference.cache
+C:\Users\denis\Documents\Visual Studio 2015\Projects\C#\DimensionPlayer\DimensionPlayer\obj\Debug\DimensionPlayer.exe
+C:\Users\denis\Documents\Visual Studio 2015\Projects\C#\DimensionPlayer\DimensionPlayer\obj\Debug\DimensionPlayer.pdb

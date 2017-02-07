@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C458A814-37CF-49BE-BA3F-0951C3597972}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WhoAmI_PC</RootNamespace>
+    <AssemblyName>WhoAmI-PC</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="answer.cs">
+      <DependentUpon>WhoAmIDatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Character.cs">
+      <DependentUpon>WhoAmIDatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CreateCharacter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateCharacter.Designer.cs">
+      <DependentUpon>CreateCharacter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Critical.cs">
+      <DependentUpon>WhoAmIDatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="journal.cs">
+      <DependentUpon>WhoAmIDatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Level.cs">
+      <DependentUpon>WhoAmIDatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="player.cs">
+      <DependentUpon>WhoAmIDatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Stage.cs">
+      <DependentUpon>WhoAmIDatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WhoAmI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WhoAmI.Designer.cs">
+      <DependentUpon>WhoAmI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WhoAmIDatabase.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WhoAmIDatabase.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WhoAmIDatabase.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WhoAmIDatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WhoAmIDatabase.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WhoAmIDatabase.edmx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="CreateCharacter.resx">
+      <DependentUpon>CreateCharacter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WhoAmI.resx">
+      <DependentUpon>WhoAmI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EntityDeploy Include="WhoAmIDatabase.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>WhoAmIDatabase.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="WhoAmIDatabase.edmx.diagram">
+      <DependentUpon>WhoAmIDatabase.edmx</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="images\LoginPart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\password.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\tick.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\X.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="images\face.jpg" />
+    <Content Include="images\Simbol.png" />
+    <Content Include="WhoAmIDatabase.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>WhoAmIDatabase.edmx</DependentUpon>
+      <LastGenOutput>WhoAmIDatabase.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="WhoAmIDatabase.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>WhoAmIDatabase.edmx</DependentUpon>
+      <LastGenOutput>WhoAmIDatabase.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
