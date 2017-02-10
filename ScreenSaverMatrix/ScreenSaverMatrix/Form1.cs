@@ -81,5 +81,10 @@ namespace ScreenSaverMatrix
         {
             generateMyData();
         }
+
+        private void richTextBox1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
