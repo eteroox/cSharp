@@ -1,0 +1,9 @@
+C:\Users\denis\Documents\GitHub\cSharp\ScreenSaverMatrix\ScreenSaverMatrix\bin\Debug\ScreenSaverMatrix.exe.config
+C:\Users\denis\Documents\GitHub\cSharp\ScreenSaverMatrix\ScreenSaverMatrix\bin\Debug\ScreenSaverMatrix.exe
+C:\Users\denis\Documents\GitHub\cSharp\ScreenSaverMatrix\ScreenSaverMatrix\bin\Debug\ScreenSaverMatrix.pdb
+C:\Users\denis\Documents\GitHub\cSharp\ScreenSaverMatrix\ScreenSaverMatrix\obj\Debug\ScreenSaverMatrix.csprojResolveAssemblyReference.cache
+C:\Users\denis\Documents\GitHub\cSharp\ScreenSaverMatrix\ScreenSaverMatrix\obj\Debug\ScreenSaverMatrix.Form1.resources
+C:\Users\denis\Documents\GitHub\cSharp\ScreenSaverMatrix\ScreenSaverMatrix\obj\Debug\ScreenSaverMatrix.Properties.Resources.resources
+C:\Users\denis\Documents\GitHub\cSharp\ScreenSaverMatrix\ScreenSaverMatrix\obj\Debug\ScreenSaverMatrix.csproj.GenerateResource.Cache
+C:\Users\denis\Documents\GitHub\cSharp\ScreenSaverMatrix\ScreenSaverMatrix\obj\Debug\ScreenSaverMatrix.exe
+C:\Users\denis\Documents\GitHub\cSharp\ScreenSaverMatrix\ScreenSaverMatrix\obj\Debug\ScreenSaverMatrix.pdb
