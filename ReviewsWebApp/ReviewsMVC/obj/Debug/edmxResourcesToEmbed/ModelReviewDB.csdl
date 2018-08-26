@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DB_A3F963_reviewsModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="userStoryDEV">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FullName" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="KickstarterCamp" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="OrderDate" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="PledgedAmount" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="OrderNumber" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="ImageName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="ImagePath" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="ImageExt" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="YourStory" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IsChecked" Type="Boolean" />
+    <Property Name="IsShared" Type="Boolean" />
+    <Property Name="DateCreated" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="BackerNumber" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="DB_A3F963_reviewsEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="userStoryDEV" EntityType="Self.userStoryDEV" />
+    <EntitySet Name="userStory" EntityType="DB_A3F963_reviewsModel.userStory" />
+    <EntitySet Name="contact" EntityType="DB_A3F963_reviewsModel.contact" />
+  </EntityContainer>
+  <EntityType Name="userStory">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="DateCreated" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="FullName" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="KickstarterCamp" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="OrderDate" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="PledgedAmount" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="OrderNumber" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="ImageName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="ImagePath" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="ImageExt" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="YourStory" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IsChecked" Type="Boolean" />
+    <Property Name="IsShared" Type="Boolean" />
+    <Property Name="DateCreated" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="BackerNumber" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="contact">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Email" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="ContactName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Issue" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="DateCreated" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="Answer" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="IsAnswered" Type="Boolean" />
+  </EntityType>
+</Schema>

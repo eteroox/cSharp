@@ -1,0 +1,225 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="DB_A3F963_reviewsModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="contact">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Email" Type="varchar" MaxLength="255" />
+          <Property Name="ContactName" Type="varchar" MaxLength="50" />
+          <Property Name="Issue" Type="varchar(max)" />
+          <Property Name="DateCreated" Type="datetime2" Precision="7" Nullable="false" />
+          <Property Name="Answer" Type="varchar(max)" />
+          <Property Name="IsAnswered" Type="bit" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'DB_A3F963_reviews.dbo.userStory' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="userStory">
+          <Key>
+            <PropertyRef Name="Id" />
+            <PropertyRef Name="DateCreated" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="FullName" Type="nvarchar" MaxLength="30" />
+          <Property Name="KickstarterCamp" Type="nvarchar" MaxLength="100" />
+          <Property Name="OrderDate" Type="nvarchar" MaxLength="30" />
+          <Property Name="PledgedAmount" Type="nvarchar" MaxLength="20" />
+          <Property Name="OrderNumber" Type="nvarchar" MaxLength="20" />
+          <Property Name="ImageName" Type="nvarchar" MaxLength="100" />
+          <Property Name="ImagePath" Type="nvarchar" MaxLength="200" />
+          <Property Name="ImageExt" Type="nvarchar" MaxLength="10" />
+          <Property Name="YourStory" Type="nvarchar(max)" />
+          <Property Name="IsChecked" Type="bit" />
+          <Property Name="IsShared" Type="bit" />
+          <Property Name="DateCreated" Type="datetime2" Precision="7" Nullable="false" />
+          <Property Name="BackerNumber" Type="nvarchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="userStoryDEV">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FullName" Type="nvarchar" MaxLength="30" />
+          <Property Name="KickstarterCamp" Type="nvarchar" MaxLength="100" />
+          <Property Name="OrderDate" Type="nvarchar" MaxLength="30" />
+          <Property Name="PledgedAmount" Type="nvarchar" MaxLength="20" />
+          <Property Name="OrderNumber" Type="nvarchar" MaxLength="20" />
+          <Property Name="ImageName" Type="nvarchar" MaxLength="100" />
+          <Property Name="ImagePath" Type="nvarchar" MaxLength="200" />
+          <Property Name="ImageExt" Type="nvarchar" MaxLength="10" />
+          <Property Name="YourStory" Type="nvarchar(max)" />
+          <Property Name="IsChecked" Type="bit" />
+          <Property Name="IsShared" Type="bit" />
+          <Property Name="DateCreated" Type="datetime2" Precision="7" Nullable="false" />
+          <Property Name="BackerNumber" Type="nvarchar" MaxLength="20" />
+        </EntityType>
+        <EntityContainer Name="DB_A3F963_reviewsModelStoreContainer">
+          <EntitySet Name="contact" EntityType="Self.contact" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="userStoryDEV" EntityType="Self.userStoryDEV" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="userStory" EntityType="Self.userStory" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [userStory].[Id] AS [Id], 
+    [userStory].[FullName] AS [FullName], 
+    [userStory].[KickstarterCamp] AS [KickstarterCamp], 
+    [userStory].[OrderDate] AS [OrderDate], 
+    [userStory].[PledgedAmount] AS [PledgedAmount], 
+    [userStory].[OrderNumber] AS [OrderNumber], 
+    [userStory].[ImageName] AS [ImageName], 
+    [userStory].[ImagePath] AS [ImagePath], 
+    [userStory].[ImageExt] AS [ImageExt], 
+    [userStory].[YourStory] AS [YourStory], 
+    [userStory].[IsChecked] AS [IsChecked], 
+    [userStory].[IsShared] AS [IsShared], 
+    [userStory].[DateCreated] AS [DateCreated], 
+    [userStory].[BackerNumber] AS [BackerNumber]
+    FROM [dbo].[userStory] AS [userStory]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="DB_A3F963_reviewsModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="userStoryDEV">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FullName" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="KickstarterCamp" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="OrderDate" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="PledgedAmount" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="OrderNumber" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="ImageName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="ImagePath" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="ImageExt" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="YourStory" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IsChecked" Type="Boolean" />
+          <Property Name="IsShared" Type="Boolean" />
+          <Property Name="DateCreated" Type="DateTime" Nullable="false" Precision="7" />
+          <Property Name="BackerNumber" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="DB_A3F963_reviewsEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="userStoryDEV" EntityType="Self.userStoryDEV" />
+          <EntitySet Name="userStory" EntityType="DB_A3F963_reviewsModel.userStory" />
+          <EntitySet Name="contact" EntityType="DB_A3F963_reviewsModel.contact" />
+        </EntityContainer>
+        <EntityType Name="userStory">
+          <Key>
+            <PropertyRef Name="Id" />
+            <PropertyRef Name="DateCreated" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="FullName" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="KickstarterCamp" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="OrderDate" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="PledgedAmount" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="OrderNumber" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="ImageName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="ImagePath" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="ImageExt" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="YourStory" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IsChecked" Type="Boolean" />
+          <Property Name="IsShared" Type="Boolean" />
+          <Property Name="DateCreated" Type="DateTime" Nullable="false" Precision="7" />
+          <Property Name="BackerNumber" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="contact">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Email" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="ContactName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Issue" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="DateCreated" Type="DateTime" Nullable="false" Precision="7" />
+          <Property Name="Answer" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="IsAnswered" Type="Boolean" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="DB_A3F963_reviewsModelStoreContainer" CdmEntityContainer="DB_A3F963_reviewsEntities">
+          <EntitySetMapping Name="userStoryDEV">
+            <EntityTypeMapping TypeName="DB_A3F963_reviewsModel.userStoryDEV">
+              <MappingFragment StoreEntitySet="userStoryDEV">
+                <ScalarProperty Name="BackerNumber" ColumnName="BackerNumber" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="FullName" ColumnName="FullName" />
+                <ScalarProperty Name="KickstarterCamp" ColumnName="KickstarterCamp" />
+                <ScalarProperty Name="OrderDate" ColumnName="OrderDate" />
+                <ScalarProperty Name="PledgedAmount" ColumnName="PledgedAmount" />
+                <ScalarProperty Name="OrderNumber" ColumnName="OrderNumber" />
+                <ScalarProperty Name="ImageName" ColumnName="ImageName" />
+                <ScalarProperty Name="ImagePath" ColumnName="ImagePath" />
+                <ScalarProperty Name="ImageExt" ColumnName="ImageExt" />
+                <ScalarProperty Name="YourStory" ColumnName="YourStory" />
+                <ScalarProperty Name="IsChecked" ColumnName="IsChecked" />
+                <ScalarProperty Name="IsShared" ColumnName="IsShared" />
+                <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="userStory">
+            <EntityTypeMapping TypeName="DB_A3F963_reviewsModel.userStory">
+              <MappingFragment StoreEntitySet="userStory">
+                <ScalarProperty Name="BackerNumber" ColumnName="BackerNumber" />
+                <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+                <ScalarProperty Name="IsShared" ColumnName="IsShared" />
+                <ScalarProperty Name="IsChecked" ColumnName="IsChecked" />
+                <ScalarProperty Name="YourStory" ColumnName="YourStory" />
+                <ScalarProperty Name="ImageExt" ColumnName="ImageExt" />
+                <ScalarProperty Name="ImagePath" ColumnName="ImagePath" />
+                <ScalarProperty Name="ImageName" ColumnName="ImageName" />
+                <ScalarProperty Name="OrderNumber" ColumnName="OrderNumber" />
+                <ScalarProperty Name="PledgedAmount" ColumnName="PledgedAmount" />
+                <ScalarProperty Name="OrderDate" ColumnName="OrderDate" />
+                <ScalarProperty Name="KickstarterCamp" ColumnName="KickstarterCamp" />
+                <ScalarProperty Name="FullName" ColumnName="FullName" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="contact">
+            <EntityTypeMapping TypeName="DB_A3F963_reviewsModel.contact">
+              <MappingFragment StoreEntitySet="contact">
+                <ScalarProperty Name="IsAnswered" ColumnName="IsAnswered" />
+                <ScalarProperty Name="Answer" ColumnName="Answer" />
+                <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+                <ScalarProperty Name="Issue" ColumnName="Issue" />
+                <ScalarProperty Name="ContactName" ColumnName="ContactName" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

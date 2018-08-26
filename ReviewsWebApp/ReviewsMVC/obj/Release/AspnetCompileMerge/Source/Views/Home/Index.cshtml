@@ -1,0 +1,41 @@
+﻿@model List<userStory>
+
+@{
+    ViewBag.Title = "10 newest stories";
+}
+
+<h1>Last 10 shared stories</h1>
+
+<hr />
+
+@if (Model != null)
+{
+    foreach (var line in Model)
+    {
+        <div style="width:100%; margin:0 auto;">
+            <div style="width:50%; margin:0 auto; text-align:center;">
+                <h2>Backer: @line.BackerNumber <span style="color:limegreen">@line.FullName</span></h2>
+                <h3>Kickstarter campaign: <span style="color:limegreen">@line.KickstarterCamp</span></h3>
+            </div>
+
+            <br/>
+
+            <div class="storyimage">
+                <a href="@line.ImagePath" data-lightbox="image-1">
+                    <img src="@line.ImagePath" title="@line.ImageName" alt="@line.ImageName" style="border:2px solid black;max-width: 100%;" />
+                </a>
+            </div>
+
+            <div class="storypledgeorder">
+                <h3>Order Number: <span style="color:firebrick">@line.OrderNumber</span></h3>
+                <h3>Order Date: <span style="color:firebrick">@line.OrderDate</span></h3>
+                <h3>Pledged Amount: <span style="color:limegreen">@line.PledgedAmount</span></h3>
+                <p>@line.YourStory</p>
+            </div>
+        </div>
+
+        <div style="float:none; clear:both;"></div>
+
+        <hr style="border:2px solid black" />
+    }
+}

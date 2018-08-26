@@ -1,0 +1,89 @@
+﻿@model ReviewsMVC.Models.ShareStoryModel
+@{
+    ViewBag.Title = "ShareStory";
+}
+
+@using (Html.BeginForm("ShareStory", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <div class="shareyourstory">
+        <h2>ShareStory</h2>
+        <h4>This is the part of website where you can share your experience with kickstarter campaign.
+        The reason why i decided to create website like this is
+        the lack of user reviews about kickstarter campaigns. We should not only see good , but also a bad things about certain campaign.
+        </h4>
+        <h4 style="color:red;">All the fields are required and all the data that you send will be visible to everyone who visits website.
+        Stories with rude content will not be published. Once reviewed, if they are legit, stories will be published and visible to
+        anyone who visits website.</h4>
+            <div class="form-group">
+                @Html.LabelFor(x => x.FullName)
+                @Html.TextBoxFor(m => m.FullName, new { @class = "form-control", placeholder = "Enter your full name here..." })
+                @Html.ValidationMessageFor(m => m.FullName, "", new { @class = "text-danger" })
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(x => x.KickStarterCampaign)
+                @Html.TextBoxFor(m => m.KickStarterCampaign, new { @class = "form-control", placeholder = "Enter name of kickstarter campaign ..." })
+                @Html.ValidationMessageFor(m => m.KickStarterCampaign, "", new { @class = "text-danger" })
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(x => x.OrderDate)
+                @Html.TextBoxFor(m => m.OrderDate, new { @class = "form-control", placeholder = "Enter order date in any format..." })
+                @Html.ValidationMessageFor(m => m.OrderDate, "", new { @class = "text-danger" })
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(x => x.PledgedAmount)
+                @Html.TextBoxFor(m => m.PledgedAmount, new { @class = "form-control", placeholder = "Enter pledged amount with currency ..." })
+                @Html.ValidationMessageFor(m => m.PledgedAmount, "", new { @class = "text-danger" })
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(x => x.OrderNumber)
+                @Html.TextBoxFor(m => m.OrderNumber, new { @class = "form-control", placeholder = "Enter your order number ..." })
+                @Html.ValidationMessageFor(m => m.OrderNumber, "", new { @class = "text-danger" })
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(x => x.BackedNumber)
+                @Html.TextBoxFor(m => m.BackedNumber, new { @class = "form-control", placeholder = "Enter your backer number ..." })
+                @Html.ValidationMessageFor(m => m.BackedNumber, "", new { @class = "text-danger" })
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(x => x.Images)
+                <input type="file" name="Images" accept="image/*" required/>
+                <br/>
+                <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#myModal">Why do we need image?</button>
+                <br />
+                <span style="color:red;">@ViewBag.ImageFormat</span>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(x => x.YourStory)
+                @Html.TextAreaFor(m => m.YourStory, new { @class = "form-control input-lg col-sm", placeholder = "Enter your story here..." })
+                @Html.ValidationMessageFor(m => m.YourStory, "", new { @class = "text-danger" })
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Share story" class="btn btn-info" />
+            </div>
+    </div>
+}
+
+
+ <!-- Modal -->
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Why do we need image?</h4>
+            </div>
+            <div class="modal-body">
+                <p>Image is needed because we need some proof that you really ordered from kickstarter campaign. If you have some
+                personal informations, that you do not want to share, on your order screenshot then do not share your story!</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+

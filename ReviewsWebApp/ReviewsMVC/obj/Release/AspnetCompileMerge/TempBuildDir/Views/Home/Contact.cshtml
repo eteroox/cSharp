@@ -1,0 +1,30 @@
+﻿@model ReviewsMVC.Models.ContactClass
+@{
+    ViewBag.Title = "Contact";
+}
+
+@using (Html.BeginForm("Contact", "Home", FormMethod.Post))
+{
+    <div class="shareyourstory">
+        <h2>Contact</h2>
+        <div class="form-group">
+            @Html.LabelFor(x => x.Email)
+            @Html.TextBoxFor(m => m.Email, new { @class = "form-control", placeholder = "Enter your Email here..." })
+            @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(x => x.ContactName)
+            @Html.TextBoxFor(m => m.ContactName, new { @class = "form-control", placeholder = "Enter your name here ..." })
+            @Html.ValidationMessageFor(m => m.ContactName, "", new { @class = "text-danger" })
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(x => x.Issue)
+            @Html.TextAreaFor(m => m.Issue, new { @class = "form-control input-lg col-sm", placeholder = "Enter your issue or suggestion here..." })
+            @Html.ValidationMessageFor(m => m.Issue, "", new { @class = "text-danger" })
+        </div>
+
+        <div class="form-group">
+            <input type="submit" value="Send" class="btn btn-info" />
+        </div>
+    </div>
+}

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="eteroox-001-site1" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\Users\\edenali\\Desktop\\ReviewsWebApp\\ReviewsMVC\\obj\\Release\\Package\\PackageTmp$" />
+    <parameterEntry kind="ProviderPath" scope="setAcl" match="^C:\\Users\\edenali\\Desktop\\ReviewsWebApp\\ReviewsMVC\\obj\\Release\\Package\\PackageTmp$" />
+  </parameter>
+  <parameter name="DB_A3F963_reviewsEntities-Web.config Connection String" description="" value="metadata=res://*/ModelReviewDB.csdl|res://*/ModelReviewDB.ssdl|res://*/ModelReviewDB.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=sql6005.site4now.net;initial catalog=DB_A3F963_reviews;user id=DB_A3F963_reviews_admin;password=Amon1jak#;MultipleActiveResultSets=True;App=EntityFramework&quot;" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\edenali\\Desktop\\ReviewsWebApp\\ReviewsMVC\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DB_A3F963_reviewsEntities']/@connectionString" />
+  </parameter>
+  <parameter name="DefaultConnection-Web.config Connection String" description="" value="Data Source=sql6005.site4now.net;Initial Catalog=DB_A3F963_reviews;User ID=DB_A3F963_reviews_admin;Password=am0n!jak;MultipleActiveResultSets=True;Application Name=EntityFramework" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\edenali\\Desktop\\ReviewsWebApp\\ReviewsMVC\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DefaultConnection']/@connectionString" />
+  </parameter>
+</parameters>

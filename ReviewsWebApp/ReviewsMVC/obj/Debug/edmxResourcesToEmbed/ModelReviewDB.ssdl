@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DB_A3F963_reviewsModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="contact">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Email" Type="varchar" MaxLength="255" />
+    <Property Name="ContactName" Type="varchar" MaxLength="50" />
+    <Property Name="Issue" Type="varchar(max)" />
+    <Property Name="DateCreated" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="Answer" Type="varchar(max)" />
+    <Property Name="IsAnswered" Type="bit" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'DB_A3F963_reviews.dbo.userStory' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="userStory">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="DateCreated" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="FullName" Type="nvarchar" MaxLength="30" />
+    <Property Name="KickstarterCamp" Type="nvarchar" MaxLength="100" />
+    <Property Name="OrderDate" Type="nvarchar" MaxLength="30" />
+    <Property Name="PledgedAmount" Type="nvarchar" MaxLength="20" />
+    <Property Name="OrderNumber" Type="nvarchar" MaxLength="20" />
+    <Property Name="ImageName" Type="nvarchar" MaxLength="100" />
+    <Property Name="ImagePath" Type="nvarchar" MaxLength="200" />
+    <Property Name="ImageExt" Type="nvarchar" MaxLength="10" />
+    <Property Name="YourStory" Type="nvarchar(max)" />
+    <Property Name="IsChecked" Type="bit" />
+    <Property Name="IsShared" Type="bit" />
+    <Property Name="DateCreated" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="BackerNumber" Type="nvarchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="userStoryDEV">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FullName" Type="nvarchar" MaxLength="30" />
+    <Property Name="KickstarterCamp" Type="nvarchar" MaxLength="100" />
+    <Property Name="OrderDate" Type="nvarchar" MaxLength="30" />
+    <Property Name="PledgedAmount" Type="nvarchar" MaxLength="20" />
+    <Property Name="OrderNumber" Type="nvarchar" MaxLength="20" />
+    <Property Name="ImageName" Type="nvarchar" MaxLength="100" />
+    <Property Name="ImagePath" Type="nvarchar" MaxLength="200" />
+    <Property Name="ImageExt" Type="nvarchar" MaxLength="10" />
+    <Property Name="YourStory" Type="nvarchar(max)" />
+    <Property Name="IsChecked" Type="bit" />
+    <Property Name="IsShared" Type="bit" />
+    <Property Name="DateCreated" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="BackerNumber" Type="nvarchar" MaxLength="20" />
+  </EntityType>
+  <EntityContainer Name="DB_A3F963_reviewsModelStoreContainer">
+    <EntitySet Name="contact" EntityType="Self.contact" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="userStoryDEV" EntityType="Self.userStoryDEV" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="userStory" EntityType="Self.userStory" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [userStory].[Id] AS [Id], 
+    [userStory].[FullName] AS [FullName], 
+    [userStory].[KickstarterCamp] AS [KickstarterCamp], 
+    [userStory].[OrderDate] AS [OrderDate], 
+    [userStory].[PledgedAmount] AS [PledgedAmount], 
+    [userStory].[OrderNumber] AS [OrderNumber], 
+    [userStory].[ImageName] AS [ImageName], 
+    [userStory].[ImagePath] AS [ImagePath], 
+    [userStory].[ImageExt] AS [ImageExt], 
+    [userStory].[YourStory] AS [YourStory], 
+    [userStory].[IsChecked] AS [IsChecked], 
+    [userStory].[IsShared] AS [IsShared], 
+    [userStory].[DateCreated] AS [DateCreated], 
+    [userStory].[BackerNumber] AS [BackerNumber]
+    FROM [dbo].[userStory] AS [userStory]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

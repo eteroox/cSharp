@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DB_A3F963_reviewsModelStoreContainer" CdmEntityContainer="DB_A3F963_reviewsEntities">
+    <EntitySetMapping Name="userStoryDEV">
+      <EntityTypeMapping TypeName="DB_A3F963_reviewsModel.userStoryDEV">
+        <MappingFragment StoreEntitySet="userStoryDEV">
+          <ScalarProperty Name="BackerNumber" ColumnName="BackerNumber" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="KickstarterCamp" ColumnName="KickstarterCamp" />
+          <ScalarProperty Name="OrderDate" ColumnName="OrderDate" />
+          <ScalarProperty Name="PledgedAmount" ColumnName="PledgedAmount" />
+          <ScalarProperty Name="OrderNumber" ColumnName="OrderNumber" />
+          <ScalarProperty Name="ImageName" ColumnName="ImageName" />
+          <ScalarProperty Name="ImagePath" ColumnName="ImagePath" />
+          <ScalarProperty Name="ImageExt" ColumnName="ImageExt" />
+          <ScalarProperty Name="YourStory" ColumnName="YourStory" />
+          <ScalarProperty Name="IsChecked" ColumnName="IsChecked" />
+          <ScalarProperty Name="IsShared" ColumnName="IsShared" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="userStory">
+      <EntityTypeMapping TypeName="DB_A3F963_reviewsModel.userStory">
+        <MappingFragment StoreEntitySet="userStory">
+          <ScalarProperty Name="BackerNumber" ColumnName="BackerNumber" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="IsShared" ColumnName="IsShared" />
+          <ScalarProperty Name="IsChecked" ColumnName="IsChecked" />
+          <ScalarProperty Name="YourStory" ColumnName="YourStory" />
+          <ScalarProperty Name="ImageExt" ColumnName="ImageExt" />
+          <ScalarProperty Name="ImagePath" ColumnName="ImagePath" />
+          <ScalarProperty Name="ImageName" ColumnName="ImageName" />
+          <ScalarProperty Name="OrderNumber" ColumnName="OrderNumber" />
+          <ScalarProperty Name="PledgedAmount" ColumnName="PledgedAmount" />
+          <ScalarProperty Name="OrderDate" ColumnName="OrderDate" />
+          <ScalarProperty Name="KickstarterCamp" ColumnName="KickstarterCamp" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="contact">
+      <EntityTypeMapping TypeName="DB_A3F963_reviewsModel.contact">
+        <MappingFragment StoreEntitySet="contact">
+          <ScalarProperty Name="IsAnswered" ColumnName="IsAnswered" />
+          <ScalarProperty Name="Answer" ColumnName="Answer" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="Issue" ColumnName="Issue" />
+          <ScalarProperty Name="ContactName" ColumnName="ContactName" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
